@@ -90,7 +90,12 @@ function Square(props) {
           'Go to game start';
         return (
           <li key={move}>
-            <button onClick={() => this.jumpTo(move)}>{desc}</button>
+            <button 
+              onClick={() => this.jumpTo(move)}
+              style={ move === this.state.stepNumber ? { fontWeight: 'bold' } : { fontWeight: 'normal' } }
+            >
+              {desc}
+            </button>
           </li>
         );
       })
